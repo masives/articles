@@ -2,9 +2,9 @@
 
 ![navigation prompt](./navigation-prompt.png)
 
-## Intruduction
+## Introduction
 
-Sometimes you'd want to warn user that changes will be lost once they leave the page. To avoid this you can throw a prompt before they do so. In this article I will show some caviats associated with it and suggest implementation.
+Sometimes you'd want to warn user that changes will be lost once they leave the page. To avoid this you can throw a prompt before they do so. In this article I will show some caveats associated with it and suggest implementation.
 
 In article I will not go into receiving information on how to manage state associated with blocking. I'd recommend having some store which would hold onto boolean which we can access in place we will be blocking.
 
@@ -52,7 +52,7 @@ We have two options here:
 
 2.  Use [history](https://github.com/ReactTraining/history)
 
-    We can block transitions by subcribing to history.block(). It accepts string (prompt message) or function that might return string.
+    We can block transitions by subscribing to history.block(). It accepts string (prompt message) or function that might return string.
 
     ```js
     history.block(() => {
@@ -94,4 +94,4 @@ history.block(({ pathname }) => {
 
 ## Conclusion
 
-Blocking user navigation is not difficult to implement but have significant limitations and caviats. It's worth considering if we're really helping user or making experience worse. If it's not saving them from losing data or create unexpected situation you should propably avoid using this feature.
+Blocking user navigation is not difficult to implement but have significant limitations and caveats. It's worth considering if we're really helping user or making experience worse. If it's not saving them from losing data or create unexpected situation you should probably avoid using this feature.
